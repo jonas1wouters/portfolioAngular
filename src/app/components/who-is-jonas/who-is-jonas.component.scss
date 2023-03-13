@@ -1,0 +1,21 @@
+.aboutMe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .profilePic{
+        width: 150px;
+        height: 150px;
+        margin-right: 10px;
+        border-radius: 50rem;
+        background-color: #261853;
+    }
+    .profileText{
+        flex: 1;
+        width: 600px;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+    }
+}

@@ -1,0 +1,8 @@
+.contactInfo{
+    display: flex;
+    flex-wrap: wrap;
+    .contactInfoList{
+        width: 50%;
+        min-width: 300px;
+    }
+}

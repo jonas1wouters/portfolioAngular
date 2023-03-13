@@ -1,0 +1,20 @@
+<div class="cv" *ngIf="cvIsVisible">
+    <div class="left">
+        <img class="profileCv" src="../../../assets/profile.png" alt="Profile CV">
+        <app-cv-about-me></app-cv-about-me>
+        <div class="spacer"></div>
+        <app-cv-info></app-cv-info>
+        <div class="spacer"></div>
+        <app-cv-languages></app-cv-languages>
+    </div>
+    <div class="right">
+        <app-title title="Jonas Wouters" [isCV]="true"></app-title>
+        <app-title title="Full-stack developer"></app-title>
+        <div class="spacer"></div>
+        <app-cv-studies></app-cv-studies>
+        <div class="spacer"></div>
+        <app-cv-experiences></app-cv-experiences>
+        <div class="spacer"></div>
+        <app-cv-knowledges></app-cv-knowledges>
+    </div>
+</div>

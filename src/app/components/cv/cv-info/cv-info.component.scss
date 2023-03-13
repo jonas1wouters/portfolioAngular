@@ -1,0 +1,16 @@
+.cvInfo{
+    text-align: left;
+    .info{
+        height: 25px;
+        i{
+            width: 20px;
+        }
+    }
+    .socials{
+        display: flex;
+        justify-content: space-between;
+        i{
+            font-size: 20px;
+        }
+    }
+}

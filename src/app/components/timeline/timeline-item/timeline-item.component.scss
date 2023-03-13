@@ -1,0 +1,71 @@
+.timelineItem{
+    z-index: 99999;
+    background-color: aliceblue;
+    position: relative;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    .work, .education, .personal{
+        position: absolute;
+        left: -30.7px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50rem;
+        border: 5px solid aliceblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .work{
+        background-color: red;
+    }
+    .education{
+        background-color: green;
+    }
+    .personal{
+        background-color: blue;
+    }
+    &::before{
+        z-index: -5;
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 4px;
+        background-color: aliceblue;
+    }
+    .time{
+        font-weight: bold;
+    }
+    .name{
+        font-weight: bold;
+        font-size: 22px;
+    }
+}
+@media screen and (min-width: 830px) {
+    .timelineItem{
+        margin-left: 0;
+        margin-right: 55px;
+        width: calc(50% - 58px);
+        .work, .education, .personal{
+            left: auto;
+            right: -36.7px;
+            transform: translate(50%, -50%);
+        }
+        &::before{
+            left: auto;
+            right: -15px;
+        }
+    }
+}

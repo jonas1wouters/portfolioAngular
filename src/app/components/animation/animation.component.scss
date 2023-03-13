@@ -1,0 +1,47 @@
+.text-animation{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 60px;
+    span{
+        max-width: 0px;
+        overflow: hidden;
+        &.design{
+            animation: designAnim 4s linear 0s;
+        }
+        &.developer{
+            animation: developerAnim 2s linear 4s forwards;
+        }
+        &.full-stack{
+            animation: developerAnim 2s linear 6s forwards;
+        }
+    }
+}
+
+@keyframes designAnim {
+    0%{
+        max-width: 0px;
+    }
+    33% {
+        max-width: 150px;
+    }    
+    66% {
+        max-width: 150px;
+    }
+    100% {
+        max-width: 0px;
+    }
+}
+
+@keyframes developerAnim {
+    0%{
+        max-width: 0px;
+    }
+    66% {
+        max-width: 150px;
+    }
+    100% {
+        max-width: 150px;
+    }
+}

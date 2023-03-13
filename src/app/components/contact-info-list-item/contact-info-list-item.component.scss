@@ -1,0 +1,17 @@
+.contactInfoListItem{
+    padding-left: 20px;
+    list-style-type: none;
+    position: relative;
+    &::before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        content: "\f0a9";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .label{
+        font-weight: bold;
+    }
+}

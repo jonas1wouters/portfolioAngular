@@ -1,0 +1,14 @@
+.knowledge{
+    display: flex;
+    flex-direction: column;
+    min-width: 234.51px;
+    .type{
+        text-decoration: underline;
+    }
+    .items{
+        display: flex;
+        .item{
+            margin-right: 2px;
+        }
+    }
+}

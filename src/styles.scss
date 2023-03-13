@@ -1,1 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap');
+
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+// Scrollbar
+html{
+    overflow-y: overlay;
+    font-family: 'Golos Text', sans-serif;
+    color: #261853;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.title{
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.contentDiv{
+  max-width: 750px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.spacer{
+  margin-top: 10px;
+  border-top: 1px solid #261853;
+  margin-bottom: 10px;
+  height: 0;
+}
+
+
+
+.timeline:nth-of-type(5) .timelineItem{
+  background-color: green;
+}

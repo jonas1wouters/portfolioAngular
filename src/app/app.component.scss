@@ -1,0 +1,21 @@
+.lay-out{
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #A8AEBD;
+    .sidebar{
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .content{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-left: 60px;
+        .router{
+            flex: 1;
+        }
+    }
+}

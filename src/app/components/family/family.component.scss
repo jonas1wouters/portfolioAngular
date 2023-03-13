@@ -1,0 +1,27 @@
+.familyMembers{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    >.familyMember{
+        background-color: #fdfdfd;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 243px;
+        >img{
+            width: 100%;
+            min-height: 243px;
+            object-fit: cover;
+        }
+        .text{
+            padding: 10px;
+            .who{
+                font-weight: bold;
+            }
+            .name{
+                font-style: italic;
+                font-size: 14px;
+            }
+        }
+    }
+}

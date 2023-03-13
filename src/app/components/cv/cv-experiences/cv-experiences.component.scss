@@ -1,0 +1,26 @@
+.experiences{
+    .experience{
+        .experienceTitle{
+            font-size: 22px;
+            font-weight: bold;
+            span{
+                font-size: 11px;
+            }
+        }
+        .experienceTime{
+            opacity: 0.6;
+        }
+        ul{
+            li{
+                display: flex;
+                .label{
+                    display: inline-block;
+                    min-width: 120px;
+                }
+            }
+        }
+        &:not(:last-child){
+            padding-bottom: 15px;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<div class="knowledge">
+    <div class="type">{{ type }}</div>
+    <div class="items">
+        <div class="item" *ngFor="let item of knowledges; let i = index">{{ item }}<span *ngIf="i + 1 < knowledges.length">,</span></div>
+    </div>
+</div>

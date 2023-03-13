@@ -1,0 +1,39 @@
+.contactForm{
+    form{
+        .inputs{
+            display: flex;
+            flex-wrap: wrap;
+            .inputDiv{
+                margin-bottom: 10px;
+                width: calc(50% - 2px);
+                min-width: 200px;
+                input{
+                    width: calc(100% - 12px - 20px);
+                    display: block;
+                    border: none;
+                    background-color: transparent;
+                    border: 1px solid black;
+                    border-radius: 50rem;
+                    min-width: 200px;
+                    padding: 5px 5px 3px 15px;
+                    outline: none;
+                }
+            }
+        }
+        .buttons{
+            button{
+                border: none;
+                padding: 0px 15px;
+                border-radius: 50rem;
+                margin-right: 10px;
+                color: #F5F5F5;
+                &[type="submit"]{
+                    background-color: green;
+                }
+                &[type="reset"]{
+                    background-color: red;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.stat{
+    width: 50%;
+    min-width: 200px;
+    text-align: center;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    &.show{
+        transform: scale(1);
+    }
+    .score{
+        font-size: 50px;
+        font-weight: bold;
+    }
+}

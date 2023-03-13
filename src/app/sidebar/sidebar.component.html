@@ -1,0 +1,13 @@
+<div class="sidebar" [ngClass]="{'navOpen': isOpen}">
+    <div class="navItems">
+        <div class="navItem">
+            <i class="toggle fa-solid" [ngClass]="{'fa-xmark': isOpen, 'fa-bars': !isOpen}" (click)="toggleSidebar()"></i>
+        </div>
+        <div [routerLinkActive]="['linkActive']" routerLink="/home" class="navItem"><i class="fa-solid fa-home"></i><span>Home</span></div>
+        <div [routerLinkActive]="['linkActive']" routerLink="/projects" class="navItem"><i class="fa-solid fa-list-check"></i><span>Projects</span></div>
+        <div [routerLinkActive]="['linkActive']" routerLink="/stage" class="navItem"><i class="fa-solid fa-user-tie"></i><span>Stage</span></div>
+        <div [routerLinkActive]="['linkActive']" routerLink="/cv" class="navItem"><i class="fa-solid fa-file"></i><span>CV</span></div>
+        <div [routerLinkActive]="['linkActive']" routerLink="/contact" class="navItem"><i class="fa-solid fa-phone"></i><span>Contact</span></div>
+    </div>
+
+</div>

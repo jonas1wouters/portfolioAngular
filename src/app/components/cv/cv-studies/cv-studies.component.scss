@@ -1,0 +1,26 @@
+.studies{
+    .studie{
+        .studieTitle{
+            font-size: 22px;
+            font-weight: bold;
+            span{
+                font-size: 11px;
+            }
+        }
+        .studieTime{
+            opacity: 0.6;
+        }
+        ul{
+            margin-left: 15px;
+            li{
+                .label{
+                    display: inline-block;
+                    width: 65px;
+                }
+            }
+        }
+        &:not(:last-child){
+            padding-bottom: 15px;
+        }
+    }
+}
