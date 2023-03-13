@@ -10,5 +10,5 @@
     </div>
 </div>
 <div *ngIf="showArray.length > 0" class="timeline">
-    <app-timeline-item *ngFor="let item of data; let even = even" [even]="even" [shown]="showArray" [item]="item"></app-timeline-item>
+    <app-timeline-item *ngFor="let item of showData; let even = even" [even]="even" [shown]="showArray" [item]="item"></app-timeline-item>
 </div>

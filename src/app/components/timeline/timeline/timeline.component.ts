@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TimelineItem } from 'src/app/interfaces/timelineItem';
 
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.scss']
 })
-export class TimelineComponent {
+export class TimelineComponent implements OnInit {
   showWork = true;
-  showEducation = false;
-  showPersonal = false;
+  showEducation = true;
+  showPersonal = true;
+  showData: Array<TimelineItem> = [];
 
-  showArray: Array<String> = ["work"];
+  showArray: Array<String> = ["personal", "work", "education"];
 
-  data: Array<Object> = [ 
+  data: Array<TimelineItem> = [ 
     {shown: this.showArray, time: '8 januari 2001', name: 'Geboorte van mij', type: 'personal', description: 'Toen ben ik geboren'},
 
     {shown: this.showArray, time: '1 september 2012', name: 'Start in SVT', type: 'education', description: 'Start van middelbare school'},
@@ -33,6 +35,10 @@ export class TimelineComponent {
     {shown: this.showArray, time: '26 februari 2023', name: 'Start stage Axxes', type: 'education', description: 'Begin van stage bij Axxes'}
   ]
 
+  ngOnInit(){
+    this.makeArray()
+  }
+
   onWorkChange(){
     this.showWork = !this.showWork;
     this.makeArray()
@@ -51,5 +57,12 @@ export class TimelineComponent {
     if(this.showWork) this.showArray.push("work");
     if(this.showEducation) this.showArray.push("education");
     if(this.showPersonal) this.showArray.push("personal");
+    
+    this.showData = [];
+    this.data.map((item) => {
+      if(this.showArray.includes(item.type)){
+        this.showData.push(item);
+      }
+    })
   }
 }

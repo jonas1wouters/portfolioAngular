@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TimelineItem } from 'src/app/interfaces/timelineItem';
 
 @Component({
   selector: 'app-timeline-item',
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class TimelineItemComponent {
   @Input() shown: Array<String> = ["personal"]
-  @Input() item: any = {time: '', name: '', type: '', description: ''}
+  @Input() item: TimelineItem = {shown: ['personal'], time: '', name: '', type: '', description: ''}
   @Input() even: Boolean = false;
 }
