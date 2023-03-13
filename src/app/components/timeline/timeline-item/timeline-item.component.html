@@ -1,6 +1,6 @@
-<div class="timelineItem" *ngIf="shown.includes(type)">
-    <div [ngClass]="type"><i *ngIf="type==='work'" class="fa-solid fa-briefcase"></i><i *ngIf="type==='education'" class="fa-solid fa-graduation-cap"></i><i *ngIf="type==='personal'" class="fa-solid fa-user"></i></div>
-    <div class="time">{{ time }}</div>
-    <div class="name">{{ name }}</div>
-    <div class="description">{{ description }}</div>
+<div class="timelineItem" [ngClass]="even ? 'even': 'uneven'" *ngIf="shown.includes(item.type)">
+    <div [ngClass]="item.type"><i *ngIf="item.type==='work'" class="fa-solid fa-briefcase"></i><i *ngIf="item.type==='education'" class="fa-solid fa-graduation-cap"></i><i *ngIf="item.type==='personal'" class="fa-solid fa-user"></i></div>
+    <div class="time">{{ item.time }}</div>
+    <div class="name">{{ item.name }}</div>
+    <div class="description">{{ item.description }}</div>
 </div>

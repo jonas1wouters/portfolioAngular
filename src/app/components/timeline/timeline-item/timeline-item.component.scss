@@ -1,9 +1,9 @@
 .timelineItem{
     z-index: 99999;
     background-color: aliceblue;
+    margin-top: 10px;
     position: relative;
     margin-left: 30px;
-    margin-bottom: 10px;
     padding: 10px;
     border-radius: 15px;
     .work, .education, .personal{
@@ -27,12 +27,15 @@
     }
     .work{
         background-color: red;
+        color: aliceblue;   
     }
     .education{
         background-color: green;
+        color: aliceblue;
     }
     .personal{
         background-color: blue;
+        color: aliceblue;
     }
     &::before{
         z-index: -5;
@@ -56,16 +59,34 @@
 @media screen and (min-width: 830px) {
     .timelineItem{
         margin-left: 0;
+        margin-top: -20px;
         margin-right: 55px;
         width: calc(50% - 58px);
         .work, .education, .personal{
             left: auto;
-            right: -36.7px;
+            right: -38.2px;
             transform: translate(50%, -50%);
         }
         &::before{
             left: auto;
             right: -15px;
+        }
+        &.uneven{
+            text-align: right;
+        }
+        &.even{
+            text-align: left;
+            margin-right: 0;
+            margin-left: auto;
+            .work, .education, .personal{
+                right: auto;
+                left: -38.2px;
+                transform: translate(-50%, -50%);
+            }
+            &::before{
+                right: auto;
+                left: -15px;
+            }
         }
     }
 }

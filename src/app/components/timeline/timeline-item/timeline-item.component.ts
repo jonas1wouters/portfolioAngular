@@ -6,9 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./timeline-item.component.scss']
 })
 export class TimelineItemComponent {
-  @Input() time: String = "";
-  @Input() name: String = "";
-  @Input() type: String = "personal";
-  @Input() description: String = "";
   @Input() shown: Array<String> = ["personal"]
+  @Input() item: any = {time: '', name: '', type: '', description: ''}
+  @Input() even: Boolean = false;
 }
