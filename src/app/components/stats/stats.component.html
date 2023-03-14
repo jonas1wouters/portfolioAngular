@@ -1,4 +1,3 @@
 <div class="stats">
-    <app-stat number="12" innerHTML="<b>Finished projects</b>"></app-stat>
-    <app-stat number="15" innerHTML="LinkedIn <b>certificates</b>"></app-stat>
+    <app-stat *ngFor="let stat of stats" [stat]="stat"></app-stat>
 </div>

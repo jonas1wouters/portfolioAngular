@@ -1,0 +1,5 @@
+<div *ngIf="project" class="projectDetails">
+    <h1 class="projectDetailsTitle">{{ project.title }}</h1>
+    <div class="projectDetailsTime">{{ project.time }}</div>
+    <div class="projectDetailsDescription" [innerHTML]="project.description"></div>
+</div>

@@ -10,10 +10,10 @@ export class TimelineComponent implements OnInit {
   showWork = true;
   showEducation = true;
   showPersonal = true;
-  showData: Array<TimelineItem> = [];
 
   showArray: Array<String> = ["personal", "work", "education"];
 
+  showData: Array<TimelineItem> = [];
   data: Array<TimelineItem> = [ 
     {shown: this.showArray, time: '8 januari 2001', name: 'Geboorte van mij', type: 'personal', description: 'Toen ben ik geboren'},
 

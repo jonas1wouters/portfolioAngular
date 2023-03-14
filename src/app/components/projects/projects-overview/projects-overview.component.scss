@@ -1,0 +1,78 @@
+.projectsOverview{
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    .project{
+        padding: 10px;
+        height: 350px;
+        background-color: aliceblue;
+        position: relative;
+        img{
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+        }
+        .projectDetails{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.5);
+            .projectTitle{
+                font-weight: bold;
+                font-size: 28px;
+            }
+            .projectTime{
+                font-style: italic;
+            }
+            .projectDescription{
+                margin-top: 15px;
+            }
+        }
+    }
+    .next, .prev{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 50px;
+        background-color: #261853;
+        color: aliceblue;
+        border: none;
+        outline: none;
+    }
+    .next{
+        right: 0;
+    }
+    .prev{
+        left: 0;
+    }
+}
+
+.projectLegend{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    div{
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+        input{
+            display: none;
+        }
+        label{
+            display: block;
+            padding: 5px 10px;
+            border-radius: 50rem;
+            &.checked{
+                background-color: lightgreen;
+            }
+            &.notChecked{
+                background-color: red;
+            }
+        }
+    }
+}

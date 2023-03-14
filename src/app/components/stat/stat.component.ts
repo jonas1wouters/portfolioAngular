@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Statistic } from 'src/app/interfaces/statistic';
 
 @Component({
   selector: 'app-stat',
@@ -6,21 +7,20 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./stat.component.scss']
 })
 export class StatComponent {
-  @Input() number: string = "";
-  @Input() innerHTML: string = "";
+  @Input() stat!: Statistic;
+  
   id: any;
 
   constructor() {};
 
   ngOnInit() {
     this.id = setInterval(() => {
-      let stats = document.getElementsByClassName('stat');
-      if(!stats[0].classList.contains("show")){
-        for(let i = 0; i < stats.length; i++) {
-          let stat = stats[i];
-          if (this.isInViewport(stat)) {
-            stat.classList.add("show")
-          }
+      console.log('Wow')
+      let stat = document.getElementsByClassName('stat' + this.stat.statId);
+      if(!stat[0].classList.contains("show")){
+        if (this.isInViewport(stat[0])) {
+          stat[0].classList.add("show")
+          clearInterval(this.id);
         }
       }
     }, 1000);

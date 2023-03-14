@@ -2,28 +2,32 @@
     form{
         .inputs{
             display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
             flex-wrap: wrap;
             .inputDiv{
                 margin-bottom: 10px;
-                width: calc(50% - 2px);
+                width: calc(50% - 10px);
+                margin-bottom: -15px;
                 min-width: 200px;
                 input{
-                    width: calc(100% - 12px - 20px);
+                    width: calc(100% - 10px);
                     display: block;
-                    border: none;
-                    background-color: transparent;
-                    border: 1px solid black;
-                    border-radius: 50rem;
+                    background-color: aliceblue;
+                    border: 1px solid #261853;
                     min-width: 200px;
-                    padding: 5px 5px 3px 15px;
+                    padding: 5px 5px 3px 5px;
                     outline: none;
+                    &::placeholder{
+                        color: #261853;
+                    }
                 }
             }
         }
         .buttons{
             button{
                 border: none;
-                padding: 0px 15px;
+                padding: 7px 25px;
                 border-radius: 50rem;
                 margin-right: 10px;
                 color: #F5F5F5;

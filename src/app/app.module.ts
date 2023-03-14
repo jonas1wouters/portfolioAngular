@@ -30,10 +30,12 @@ import { CvStudiesComponent } from './components/cv/cv-studies/cv-studies.compon
 import { CvExperiencesComponent } from './components/cv/cv-experiences/cv-experiences.component';
 import { CvKnowledgeComponent } from './components/cv/cv-knowledge/cv-knowledge.component';
 import { CvKnowledgesComponent } from './components/cv/cv-knowledges/cv-knowledges.component';
-import { MapComponent } from './components/map/map.component';
-import { EmailFormComponent } from './components/email-form/email-form.component';
+import { MapComponent } from './components/contact/map/map.component';
+import { EmailFormComponent } from './components/contact/email-form/email-form.component';
 import { TimelineComponent } from './components/timeline/timeline/timeline.component';
 import { TimelineItemComponent } from './components/timeline/timeline-item/timeline-item.component';
+import { ProjectsOverviewComponent } from './components/projects/projects-overview/projects-overview.component';
+import { ProjectDetailsComponent } from './components/projects/project-details/project-details.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +70,8 @@ import { TimelineItemComponent } from './components/timeline/timeline-item/timel
     EmailFormComponent,
     TimelineComponent,
     TimelineItemComponent,
+    ProjectsOverviewComponent,
+    ProjectDetailsComponent,
   ],
   imports: [
     BrowserModule,
